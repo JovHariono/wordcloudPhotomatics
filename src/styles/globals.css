@@ -1400,11 +1400,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .scroll-list-led {
   width: 100%; /* Set the width to 100% of the viewport width */
   height: 100vh; /* Set the height to 100% of the viewport height */
-  background: url("../../public/assets/GG/ledbg.png"); /* Center the background */
+  background: url("../../public/assets/photomatics/bgPhotomatics.png"); /* Center the background */
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 /* .scroll-list {

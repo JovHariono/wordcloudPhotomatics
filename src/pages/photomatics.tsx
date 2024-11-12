@@ -2,6 +2,9 @@ import axios from "axios";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import prohibitedWords from "./components/ForbiddenWords";
+import Image from "next/image";
+
+import logoPhotomatics from "@/public/assets/photomatics/logoPhotomatics.png"
 
 interface IFormParagonProps { }
 
@@ -76,7 +79,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     <>
       <div className="containerFormParagon">
         <div className="containerInputFormParagon">
-          {/* <Image className="imageNovo" src={logoCurcol} alt="logoNovo"></Image> */}
+          <Image className="imageNovo" src={logoPhotomatics} alt="logoPhotomatics"></Image>
           <form className="formParagon" onSubmit={handleSubmit}>
             {/* <h1>Whats is the best version of you?</h1> */}
 
@@ -85,7 +88,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 type="text"
                 required
                 value={kata}
-                placeholder="Tulis nama tongkronganmu..."
+                placeholder="Tulis curhatan kamu..."
                 onChange={(e) => setKata(e.target.value)}
                 maxLength={20}
               />

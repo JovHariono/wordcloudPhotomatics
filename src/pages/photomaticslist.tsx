@@ -1,11 +1,13 @@
-import axios from 'axios';
-import * as React from 'react';
-import { useEffect, useState } from 'react';
-import { Paragon } from '../type';
-import move from './components/mover/RandomObjectMover';
+import axios from "axios";
+import * as React from "react";
+import { useEffect, useState } from "react";
+import { Paragon } from "../type";
+import move from "./components/mover/RandomObjectMover";
+import Image from "next/image";
 
-interface IParagonListProps {
-}
+import componentPhotomatics from "@/public/assets/photomatics/componentBgPhotomatics.png";
+
+interface IParagonListProps {}
 
 const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   const [data, setData] = useState<Paragon[]>([]);
@@ -14,7 +16,9 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://photomatics.cloud/api/data1?_sort=id&_order=desc&_limit=30`)
+        .get(
+          `https://photomatics.cloud/api/data1?_sort=id&_order=desc&_limit=30`
+        )
         .then((res) => {
           setData(res.data);
           setIsLoaded(true);
@@ -22,11 +26,13 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         .catch((err) => console.log(err));
       setInterval(() => {
         axios
-          .get(`https://photomatics.cloud/api/data1?_sort=id&_order=desc&_limit=30`)
+          .get(
+            `https://photomatics.cloud/api/data1?_sort=id&_order=desc&_limit=30`
+          )
           .then((res) => {
             setData(res.data);
           })
-          .catch((err) => console.log(err))
+          .catch((err) => console.log(err));
       }, 5000);
     }
   }, []);
@@ -34,17 +40,29 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     data.forEach(function (value, i) {
       move(`kata${i}`);
-    })
+    });
   }, [data]);
 
   return (
     <>
-      <script type="text/javascript" src="src/pages/components/mover/RandomObjectMover.js"></script>
-      <div className='scroll-list-led'>
-        <div className="scroll" id='scroll'>
+      <script
+        type="text/javascript"
+        src="src/pages/components/mover/RandomObjectMover.js"
+      ></script>
+      <div className="scroll-list-led">
+        <div className="containerComponentPhotomatics">
+          <Image
+            alt="componentPhotomatics"
+            src={componentPhotomatics}
+            width={1200}
+          ></Image>
+        </div>
+        <div className="scroll" id="scroll">
           {data.map((x, idx) => (
             <div>
-              <p className='kata-g' id={`kata${idx}`}>{x.kata}</p>
+              <p className="kata-g" id={`kata${idx}`}>
+                {x.kata}
+              </p>
             </div>
           ))}
         </div>

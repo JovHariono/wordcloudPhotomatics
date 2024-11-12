@@ -24,14 +24,34 @@
   animation-duration: 1.8s;
   animation-delay: 0.5s;
   animation-name: fadeInUp;
-  animation-fill-mode: both;
-  padding-bottom: 16rem;
-  background: url("../../public/assets/GG/mobile1.png");
+  animation-fill-mode: both;  
+  background: url("../../public/assets/photomatics/bgPhotomatics.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   overflow: hidden;
+  gap: 2rem;
 }
+
+/* .containerFormParagon {
+  display: flex;
+  font-family: "UniversalSerif";
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  animation-duration: 1.8s;
+  animation-delay: 0.5s;
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+  padding-bottom: 14rem;
+  background: url("../../public/assets/photomatics/bgPhotomatics.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+} */
 
 .containerFormParagon2 {
   display: flex;
@@ -59,22 +79,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   width: 100%;
 }
 
 .imageNovo {
   height: auto;
-  width: 25rem;
+  width: 28rem;
   /* object-fit: contain; */
 }
 
-.formParagon {
+.containerComponentPhotomatics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.componentPhotomatics {
+  height: auto;
+  width: 20rem;
+}
+
+/* .formParagon {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: absolute;
   top: 26rem;
-}
+} */
 
 .formParagon h1 {
   font-family: "UniversalSeriv";
@@ -168,7 +200,7 @@ input::placeholder {
 
 @media only screen and (max-width: 900px) {
   .containerInputFormParagon {
-    padding: 0 0rem 0rem 0rem;
+    padding: 1rem 0rem 1rem 0rem;
   }
 
   .imageNovo {
@@ -178,19 +210,19 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 816px) {
-  .imageNovo {
-    width: 18rem;
-  }
+  /* .imageNovo {
+    width: 25rem;
+  } */
 
-  .formParagon {
-    top: 17rem;
-  }
+  /* .formParagon {
+    top: 14rem;
+  } */
 }
 
 @media only screen and (max-width: 816px) {
-  .containerInputFormParagon {
+  /* .containerInputFormParagon {
     padding: 0;
-  }
+  } */
 
   .formParagon {
     width: 80%;
@@ -226,7 +258,7 @@ input::placeholder {
   }   */
 
   .containerFormParagon {
-    background: url("../../public/assets/GG/mobile1.png");
+    background: url("../../public/assets/photomatics/mobilePhotomatics.png");
     background-size: cover;
     background-position: top center;    
     background-repeat: no-repeat;
