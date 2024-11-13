@@ -2,7 +2,7 @@ function RandomObjectMover(obj, container) {
   this.$object = obj;
   this.$container = container;
   this.container_is_window = container === window;
-  this.pixels_per_second = 80;
+  this.pixels_per_second = 200;
   this.current_position = { x: 0, y: 0 };
   this.is_running = false;
 }
@@ -16,7 +16,7 @@ RandomObjectMover.prototype._getContainerDimensions = function () {
   if (this.$container === window) {
     return { 'height': this.$container.innerHeight, 'width': this.$container.innerWidth };
   } else {
-    return { 'height': this.$container.clientHeight, 'width': this.$container.clientWidth };
+    return { 'height': this.$container.clientHeight + 200, 'width': this.$container.clientWidth };
   }
 }
 
@@ -27,8 +27,8 @@ RandomObjectMover.prototype._generateNewPosition = function () {
   var availableWidth = containerSize.width - this.$object.clientWidth;
 
   // Pick a random place in the space
-  var y = Math.floor(Math.random() * availableHeight) + 24 * 16;
-  var x = Math.floor(Math.random() * availableWidth);
+  var y = Math.floor(Math.random() * availableHeight) + 24 * 5;
+  var x = Math.floor(Math.random() * availableWidth) + 24 * 6;
 
   // Create a random spread factor to modify x and y distribution
   var spreadFactor = Math.random() * 0.5 + 0.5; // Generates a factor between 0.5 and 1.0
