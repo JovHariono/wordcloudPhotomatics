@@ -17,7 +17,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (!isLoaded) {
       axios
         .get(
-          `https://photomatics.cloud/api/data1?_sort=id&_order=desc&_limit=30`
+          `https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=30`
         )
         .then((res) => {
           setData(res.data);
@@ -27,7 +27,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
       setInterval(() => {
         axios
           .get(
-            `https://photomatics.cloud/api/data1?_sort=id&_order=desc&_limit=30`
+            `https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=30`
           )
           .then((res) => {
             setData(res.data);

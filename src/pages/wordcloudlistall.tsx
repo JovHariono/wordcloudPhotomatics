@@ -22,23 +22,15 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://photomatics.cloud/api/data1?_sort=id&_order=desc`)
+        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc`)
         .then((res) => setData1(res.data))
         .catch((err) => console.log(err));
-      // axios
-      //   .get(`https://photomatics.cloud/api/data2?_sort=id&_order=desc`)
-      //   .then((res) => setData2(res.data))
-      //   .catch((err) => console.log(err));
       setIsLoaded(true);
       setInterval(() => {
         axios
-          .get(`https://photomatics.cloud/api/data1?_sort=id&_order=desc`)
+          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc`)
           .then((res) => setData1(res.data))
           .catch((err) => console.log(err));
-        // axios
-        //   .get(`https://photomatics.cloud/api/data2?_sort=id&_order=desc`)
-        //   .then((res) => setData2(res.data))
-        //   .catch((err) => console.log(err));
       }, 10000);
     }
   }, []);
@@ -49,7 +41,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (deleteKataAll) {
       data1.forEach((data) => {
         axios
-          .delete(`https://photomatics.cloud/api/data1/${data.id}`)
+          .delete(`https://konseruntuk.online/api/data1/${data.id}`)
           .catch((err) => console.log(err));
       });
       alert("berhasil delete data");
@@ -74,20 +66,10 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
 
     if (deleteKata) {
       axios
-        .delete(`https://photomatics.cloud/api/data1/${id}`)
+        .delete(`https://konseruntuk.online/api/data1/${id}`)
         .catch((err) => console.log(err));
     }
   };
-
-  // const handleDelete2 = (id: any) => {
-  //   const deleteKata = window.confirm("Are you sure want to delete?");
-
-  //   if (deleteKata) {
-  //     axios
-  //       .delete(`https://photomatics.cloud/api/data2/${id}`)
-  //       .catch((err) => console.log(err));
-  //   }
-  // };
 
   return (
     <>
@@ -96,7 +78,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         <div className="row">
           <div className="list-holder">
             <h2>Data Input</h2>
-            <button onClick={() => handleDeleteAll()}>Delete All Data 1</button>
+            <button onClick={() => handleDeleteAll()}>Delete All Data</button>
             <div>
               {data1.slice(0, itemsToShow).map((data) => (
                 <div className="data-item" key={String(data.id)}>

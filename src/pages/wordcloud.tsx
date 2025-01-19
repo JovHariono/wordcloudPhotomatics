@@ -44,7 +44,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       };
 
       const postResponse = await axios.post(
-        "https://photomatics.cloud/api/data1",
+        "https://konseruntuk.online/api/data1",
         postData,
         {
           headers: { "Content-Type": "application/json" },

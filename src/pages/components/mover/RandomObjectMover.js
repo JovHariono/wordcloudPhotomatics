@@ -99,8 +99,12 @@ RandomObjectMover.prototype.stop = function () {
 }
 
 const move = (id) => {
-  var x = new RandomObjectMover(document.getElementById(id), document.getElementById('scroll'));
-  x.start();
+  var element = document.getElementById(id);
+  if (element.className === 'kata') {
+    var x = new RandomObjectMover(element, document.getElementById('scroll'));
+    x.start();
+    element.className = 'kata moving'
+  }
 };
 
 module.exports = move;
