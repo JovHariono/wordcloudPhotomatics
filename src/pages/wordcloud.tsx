@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import prohibitedWords from "./components/ForbiddenWords";
 import Image from "next/image";
 
-import logoPhotomatics from "@/public/assets/photomatics/logoPhotomatics.png"
+import logoKuksh from "@/public/assets/kuksh/kuksh_pc.png";
 
 interface IFormParagonProps { }
 
@@ -79,7 +79,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     <>
       <div className="containerFormParagon">
         <div className="containerInputFormParagon">
-          <Image className="imageNovo" src={logoPhotomatics} alt="logoPhotomatics"></Image>
+          <Image className="imageNovo" src={logoKuksh} alt="logoPhotomatics"></Image>
           <form className="formParagon" onSubmit={handleSubmit}>
             {/* <h1>Whats is the best version of you?</h1> */}
 

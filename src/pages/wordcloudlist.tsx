@@ -5,7 +5,7 @@ import { Paragon } from "../type";
 import move from "@/src/pages/components/mover/RandomObjectMover";
 import Image from "next/image";
 
-import componentPhotomatics from "@/public/assets/photomatics/componentBgPhotomatics.png";
+import componentKuksh from "@/public/assets/kuksh/kuksh_pc.png";
 
 interface IParagonListProps { }
 
@@ -48,7 +48,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
       <div className="containerComponentPhotomatics">
         <Image
           alt="componentPhotomatics"
-          src={componentPhotomatics}
+          src={componentKuksh}
           width={1200}
         ></Image>
       </div>
