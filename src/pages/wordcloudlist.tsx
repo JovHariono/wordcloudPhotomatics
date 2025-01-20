@@ -46,11 +46,11 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   return (
     <div className="scroll-list-led">
       <div className="containerComponentPhotomatics">
-        <Image
+        {/* <Image
           alt="componentPhotomatics"
           src={componentKuksh}
           width={1200}
-        ></Image>
+        ></Image> */}
       </div>
       <div className="scroll" id="scroll">
         {data.map((x, idx) => (
