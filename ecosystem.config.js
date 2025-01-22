@@ -7,7 +7,7 @@ module.exports = {
   apps: [
     {
       name: 'wordcloud', // pm2 start App name
-      script: 'app.js',
+      script: 'server.js',
       exec_mode: 'cluster', // 'cluster' or 'fork'
       instance_var: 'INSTANCE_ID', // instance variable
       instances: 1, // pm2 instance count
