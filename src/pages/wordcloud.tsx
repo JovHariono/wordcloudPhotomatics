@@ -79,7 +79,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     <>
       <div className="containerFormParagon">
         <div className="containerInputFormParagon">
-          <Image className="imageNovo" src={logoKuksh} alt="logoPhotomatics"></Image>
+          {/* <Image className="imageNovo" src={logoKuksh} alt="logoPhotomatics"></Image> */}
           <form className="formParagon" onSubmit={handleSubmit}>
             {/* <h1>Whats is the best version of you?</h1> */}
 
@@ -88,7 +88,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 type="text"
                 required
                 value={kata}
-                placeholder="Tulis curhatan kamu..."
+                placeholder="Semoga 2025..."
                 onChange={(e) => setKata(e.target.value)}
                 maxLength={20}
               />
