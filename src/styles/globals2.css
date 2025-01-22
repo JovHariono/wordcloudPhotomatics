@@ -25,7 +25,7 @@
   animation-delay: 0.5s;
   animation-name: fadeInUp;
   animation-fill-mode: both;  
-  background: url("../../public/assets/photomatics/bgPhotomatics.png");
+  background: url("../../public/assets/kuksh/kuksh_pc.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -166,10 +166,10 @@
 
 .submit-button {
   font-size: 1.2rem;
-  background-color: #960e0f;
-  color: #ffffff;
+  background-color: #ffffff;
+  /* color: #ffffff; */
   cursor: pointer;
-  border: 2px solid #960e0f;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 10px 20px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -203,7 +203,7 @@ input::placeholder {
 
 @media only screen and (max-width: 900px) {
   .containerInputFormParagon {
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 15em 0rem 1rem 0rem;
   }
 
   .imageNovo {
@@ -261,7 +261,7 @@ input::placeholder {
   }   */
 
   .containerFormParagon {
-    background: url("../../public/assets/photomatics/mobilePhotomatics.png");
+    background: url("../../public/assets/kuksh/kuksh_mobile.jpg");
     background-size: cover;
     background-position: top center;    
     background-repeat: no-repeat;
