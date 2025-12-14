@@ -125,7 +125,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
 
   return (
     <>
-      <script type="text/javascript" src="src/pages/components/mover/RandomObjectMover.js"></script>
+      <script type="text/javascript" src="src/components/mover/RandomObjectMover.js"></script>
       <div className='scroll-list'>
         <div className='scroll-container' id="scroll-container">
         </div>
