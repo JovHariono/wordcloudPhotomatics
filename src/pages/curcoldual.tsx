@@ -3,7 +3,7 @@ import Image from "next/image";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import logoCurcol from "../../public/assets/curcol/logoCurcol.png";
-import prohibitedWords from "./components/ForbiddenWords";
+import prohibitedWords from "../components/ForbiddenWords";
 
 interface IFormParagonProps { }
 

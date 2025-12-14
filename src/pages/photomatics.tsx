@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as React from "react";
 import { useEffect, useState } from "react";
-import prohibitedWords from "./components/ForbiddenWords";
+import prohibitedWords from "../components/ForbiddenWords";
 import Image from "next/image";
 
 import logoPhotomatics from "@/public/assets/photomatics/logoPhotomatics.png"
