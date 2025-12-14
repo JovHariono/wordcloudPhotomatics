@@ -6,7 +6,7 @@ const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
 const hostname = 'localhost';
-const nextPort = process.env.PORT || 8080;
+const nextPort = process.env.PORT || 3000;
 // const jsonServerPort = 3001;
 
 const app = next({ dev });
