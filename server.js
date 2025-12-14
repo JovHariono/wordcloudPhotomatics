@@ -1,13 +1,13 @@
 const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
-const jsonServer = require('json-server');
+// const jsonServer = require('json-server');
 const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
 const hostname = 'localhost';
 const nextPort = process.env.PORT || 8080;
-const jsonServerPort = 3001;
+// const jsonServerPort = 3001;
 
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -37,16 +37,16 @@ app.prepare().then(() => {
   });
 
   // JSON Server setup
-  const jsonServerApp = jsonServer.create();
-  const jsonRouter = jsonServer.router(path.join(__dirname, 'data', 'db.json'));
-  const middlewares = jsonServer.defaults();
-  jsonServerApp.use(middlewares);
-  jsonServerApp.use('/api', jsonRouter);
+  // const jsonServerApp = jsonServer.create();
+  // const jsonRouter = jsonServer.router(path.join(__dirname, 'data', 'db.json'));
+  // const middlewares = jsonServer.defaults();
+  // jsonServerApp.use(middlewares);
+  // jsonServerApp.use('/api', jsonRouter);
 
   // JSON Server
-  createServer((req, res) => {
-    jsonServerApp(req, res);
-  }).listen(jsonServerPort, () => {
-    console.log(`> JSON Server Ready on http://${hostname}:${jsonServerPort}/api`);
-  });
+  // createServer((req, res) => {
+  //   jsonServerApp(req, res);
+  // }).listen(jsonServerPort, () => {
+  //   console.log(`> JSON Server Ready on http://${hostname}:${jsonServerPort}/api`);
+  // });
 });
